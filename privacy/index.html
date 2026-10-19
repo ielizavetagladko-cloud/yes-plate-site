@@ -60,7 +60,7 @@
     <a href="/privacy/uk/">Українською</a>
   </nav>
   <h1>Privacy Policy — Yes Plate</h1>
-<p><strong>Last updated: 20 September 2026</strong></p>
+<p><strong>Last updated: 19 October 2026</strong></p>
 <h2>The short version</h2>
 <p>Everything you enter into Yes Plate stays on your phone. There is no account to create, we run no servers that store your data, and we have no way to read what you record. That includes the health conditions you select — the most sensitive thing the app knows about you.</p>
 <p>One thing to know: your phone may keep its own backup of the app's data in your Google or Apple account. That is the operating system's doing, not ours, and it goes to your account — but you should know it happens. See <em>Your phone's own backup</em> below.</p>
@@ -69,10 +69,21 @@
 <p>All of it lives in the app's private storage on your device. Uninstalling the app deletes it.</p>
 <p>Under EU data protection law, information about your health is a special category of personal data. The app's answer to that is not to collect it centrally at all.</p>
 <h2>What leaves your device</h2>
-<p>One thing: a check for app updates.</p>
+<p>Three things: a check for app updates, barcode scanning, and estimating a dish from a photo — and only when you ask for it.</p>
 <p>When you open Yes Plate, it asks Expo's update service (<code>u.expo.dev</code>) whether a newer version of the app's code is available. That request contains:</p>
 <ul><li>the platform (Android or iOS) and the app's version identifiers</li><li>a random identifier the app generates on first launch and keeps in its own storage. It is used only to deliver updates, is not derived from your phone's hardware, and is gone when you uninstall the app.</li><li>the IP address that any internet request carries</li></ul>
 <p>It does not contain your name, your health conditions, your body details or your diary. Expo's handling of that service is covered by their own privacy policy: <a href="https://expo.dev/privacy">https://expo.dev/privacy</a></p>
+<h3>Barcode scanning</h3>
+<p>When you point the camera at a barcode, the app sends <strong>the number from the packet</strong> to the open Open Food Facts database (<code>world.openfoodfacts.org</code>) to look up what the product contains. The only other thing that reaches them is the IP address that any internet request carries.</p>
+<p>The photograph itself goes nowhere. The camera image is decoded on your phone, and only the recognised number leaves it. Your conditions, body data and diary are not attached to this request.</p>
+<p>Open Food Facts is a non-profit community that maintains an open food database. Their policy: <a href="https://world.openfoodfacts.org/privacy">https://world.openfoodfacts.org/privacy</a></p>
+<h3>Estimating a dish from a photo</h3>
+<p>If you open the camera yourself and photograph a plate, that picture leaves the phone. It goes to our proxy on Cloudflare and on to an Anthropic model, which returns the name of the dish and a rough nutrition estimate.</p>
+<p>A random number identifying your device is sent with it. It serves exactly one purpose: counting how many estimates were made in a day, so that no one exhausts the allowance for everyone else. It does not come from your phone’s hardware, is not tied to you, and disappears with the app.</p>
+<p><strong>The picture is not stored anywhere</strong> — not by us, not in the proxy’s logs. It lives for the length of the request and is gone. Only the figures you confirm reach your diary.</p>
+<p>Your name, health conditions, body data and diary are not attached to this request.</p>
+<p>Anthropic’s handling is covered by their policy: <a href="https://www.anthropic.com/legal/privacy">https://www.anthropic.com/legal/privacy</a></p>
+<p>None of this happens by itself. The camera turns on only when you open that screen, and the picture goes further only after you press the button.</p>
 <h2>Your phone's own backup</h2>
 <p>Android and iOS both back up app data by themselves. On Android this is Auto Backup, which copies the app's data to your Google Drive; on iPhone it is part of your iCloud backup. It happens at the operating system's level, without the app asking for it, and the copy lands in your own account — not with us. We never see it and cannot read it.</p>
 <p>We leave it switched on deliberately. A lost or broken phone is the likeliest way to lose months of records, and this is the one safety net that works without you having to remember anything.</p>
@@ -81,7 +92,7 @@
 <p>You can also save a backup file from within the app. The app writes the file and hands it to your phone's own sharing menu — you choose where it goes. From that moment the file is in your hands, not ours.</p>
 <p>The file contains everything listed above, including your health conditions. Keep it somewhere private. A messenger or a shared drive is not a good home for it.</p>
 <h2>What the app does not do</h2>
-<ul><li>No accounts, no sign-in</li><li>No analytics, no advertising, no tracking</li><li>Nothing is sold, shared or sent to anyone</li><li>No access to your contacts, photos, location, camera or microphone</li></ul>
+<ul><li>No accounts, no sign-in</li><li>No analytics, no advertising, no tracking</li><li>Nothing is sold, shared or sent to anyone</li><li>No access to your contacts, photos, location or microphone</li><li>The camera turns on only when you open the barcode scanner or the photo estimate yourself</li></ul>
 <h2>Children</h2>
 <p>Yes Plate is not aimed at children under 13 and does not knowingly collect anything from them.</p>
 <h2>Your rights</h2>
