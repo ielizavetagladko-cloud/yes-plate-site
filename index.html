@@ -1,38 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yes Plate</title>
+<title>Yes Plate — рецепти, які вам можна</title>
+<meta name="description" content="Діагноз приходить зі списком заборон. Yes Plate звіряє з ним кожну страву й показує, чому вона підходить — або чому ні.">
 <link rel="icon" href="/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yes Plate — рецепти, які вам можна">
+<meta property="og:description" content="Діагноз приходить зі списком заборон. Yes Plate звіряє з ним кожну страву й показує, чому вона підходить — або чому ні.">
+<meta property="og:image" content="https://yesplate.app/og.png">
+<meta property="og:url" content="https://yesplate.app/">
+<meta name="twitter:card" content="summary_large_image">
 <style>
+  :root {
+    --bg: #F7F2E8;
+    --surface: #FFFCF6;
+    --text: #3A342A;
+    --muted: #60584B;
+    --primary: #7BA97C;
+    --primary-dark: #4D7852;
+    --border: #E5DBC6;
+  }
+  * { box-sizing: border-box; }
   body {
     margin: 0;
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-    padding: 24px;
-    background: #F7F2E8;
-    color: #3A342A;
+    padding: 0 16px 56px;
+    background: var(--bg);
+    color: var(--text);
     font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 46rem; margin: 0 auto; }
+  header { text-align: center; padding: 48px 0 8px; }
+  header img { width: 88px; height: 88px; border-radius: 20px; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 20px 0 10px; }
+  .lead { max-width: 32rem; margin: 0 auto; color: var(--muted); }
+  .buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 28px 0 8px; }
+  .store {
+    display: inline-block;
+    padding: 14px 26px;
+    border-radius: 14px;
+    background: var(--primary-dark);
+    color: #FFFCF6;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .store:hover { background: #3F6444; }
+  .soon { color: var(--muted); font-size: 0.9rem; margin: 0; }
+  .shots {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    margin: 40px 0 8px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+  .shots img {
+    width: 200px;
+    flex: 0 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+  }
+  ul { max-width: 32rem; margin: 32px auto 0; padding-left: 20px; }
+  li { margin-bottom: 8px; }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.9rem;
     text-align: center;
   }
-  img { width: 96px; height: 96px; border-radius: 22px; }
-  h1 { font-size: 1.9rem; margin: 20px 0 8px; }
-  p { max-width: 30rem; margin: 0 auto 24px; color: #60584B; }
-  a { color: #4D7852; }
+  footer a { color: var(--primary-dark); }
+  .langs { margin-bottom: 10px; }
+  .langs a { margin: 0 6px; }
 </style>
 </head>
 <body>
-  <div>
+<main>
+  <header>
     <img src="/icon.png" alt="Yes Plate">
-    <h1>Yes Plate</h1>
-    <p>Recipes that fit your medical diet. Choose what you must avoid, and the
-       app shows only what suits you — with the reason why.</p>
-    <p><a href="/privacy/">Privacy policy</a> &middot;
-       <a href="/terms/">Terms of use</a></p>
-    <p><a href="/privacy/uk/">Політика приватності</a> &middot;
-       <a href="/terms/uk/">Умови використання</a></p>
-  </div>
+    <h1>Рецепти, які вам можна</h1>
+    <p class="lead">Діагноз приходить зі списком заборон. Yes Plate звіряє з ним кожну страву й показує, чому вона підходить — або чому ні.</p>
+    <div class="buttons"><a class="store" href="https://play.google.com/store/apps/details?id=com.yesplate.app">Завантажити з Google Play</a></div>
+    <p class="soon">Версія для iPhone та iPad — незабаром.</p>
+  </header>
+
+  <div class="shots"><img src="/shots/uk_1.jpg" alt="" loading="lazy" width="200"><img src="/shots/uk_2.jpg" alt="" loading="lazy" width="200"><img src="/shots/uk_3.jpg" alt="" loading="lazy" width="200"></div>
+
+  <ul><li>178 рецептів із фотографіями, складниками й кроками</li><li>14 станів — від виразки до подагри, і їх можна поєднувати</li><li>Щоденник, який сам додає день: калорії, білок, вода</li><li>Нічого не виходить із телефона: ані діагноз, ані те, що ви їли</li></ul>
+
+  <footer>
+    <div class="langs">Українська &middot; <a href="/pl/">Polski</a> &middot; <a href="/en/">English</a></div>
+    <a href="/privacy/uk/">Політика приватності</a> &middot; <a href="/terms/uk/">Умови використання</a>
+  </footer>
+</main>
 </body>
 </html>
