@@ -47,13 +47,21 @@
   }
   .store:hover { background: #3F6444; }
   .soon { color: var(--muted); font-size: 0.9rem; margin: 0; }
+  /* На телефоні три знімки в рядок не вміщаються, і вирівнювання по центру
+     показувало перший розрізаним навпіл — наче сторінка зламана. Тому
+     вузький екран починає з лівого краю й гортається, а широкий центрує. */
   .shots {
     display: flex;
     gap: 14px;
-    justify-content: center;
+    justify-content: flex-start;
     margin: 40px 0 8px;
     overflow-x: auto;
     padding-bottom: 8px;
+    scroll-snap-type: x proximity;
+  }
+  .shots img { scroll-snap-align: start; }
+  @media (min-width: 46rem) {
+    .shots { justify-content: center; overflow-x: visible; }
   }
   .shots img {
     width: 200px;
