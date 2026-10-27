@@ -77,6 +77,20 @@
   }
   ul { max-width: 32rem; margin: 32px auto 0; padding-left: 20px; }
   li { margin-bottom: 8px; }
+  /* Друге посилання на сторінці, і воно не має змагатися з кнопкою магазину.
+     Тому не залита кнопка, а обведена: видно, що це кнопка, але вага менша. */
+  .more { margin: 36px 0 0; text-align: center; }
+  .more a {
+    display: inline-block;
+    padding: 12px 22px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface);
+    color: var(--primary-dark);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .more a:hover { border-color: var(--primary); }
   footer {
     margin-top: 48px;
     padding-top: 20px;
